@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>TodoList</h1>
+
+        <nav>
+            <div id="google-login" class="login">
+                <a href="#">google login</a>
+            </div>
+            <div id="naver-login" class="login">
+                <a href="#">naver login</a>
+            </div>
+
+            <div id="log-out" class="login">
+                <a href="#">logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="content">
+        <div class="text">
+            <p>서비스를 이용하려면 로그인을 해야합니다.</p>
+            <p>{유저아이디} 님 환영합니다. 원하는 글을 작성하세요!</p>    
+        </div>
+        <div class="btn">
+            <a href="/posts/save">글 작성</a>
+        </div>
+        <table>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>AUTHOR</th>
+            <th>UPDATED DATE</th>
+
+            {{#posts}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td><a href="#">{{title}}</a></td>
+                    <td>{{author}}</td>
+                    <td>2021-09-18 / 12:11</td>
+                </tr>
+            {{/posts}}
+
+        </table>
+    </section>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>

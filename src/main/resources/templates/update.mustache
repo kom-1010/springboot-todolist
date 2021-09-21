@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>TodoList</h1>
+
+        <nav>
+            <div id="google-login" class="login">
+                <a href="#">google login</a>
+            </div>
+            <div id="naver-login" class="login">
+                <a href="#">naver login</a>
+            </div>
+
+            <div id="log-out" class="login">
+                <a href="#">logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="content">
+        <h1>글 수정</h1>
+        <form action="">
+            <div class="input-box">
+                <label for="">ID</label>
+                <input type="text" id="post-id" placeholder="제목을 입력하세요." readonly>
+            </div>
+
+            <div class="input-box">
+                <label for="">TITLE</label>
+                <input type="text" id="title" placeholder="제목을 입력하세요.">
+            </div>
+            <div class="input-box">
+                <label for="">AUTHOR</label>
+                <input type="text" id="author" placeholder="작성자를 입력하세요." readonly>
+            </div>
+            <div class="input-box">
+                <label for="">CONTENT</label>
+                <textarea name="" id="content" cols="30" rows="10" placeholder="글을 작성하세요"></textarea>
+            </div>
+        </form>
+        <div class="btn" id="update-btn">
+            <a href="#">수정</a>
+        </div>
+
+        <div class="btn" id="delete-btn">
+            <a href="#">삭제</a>
+        </div>
+
+        <div class="btn" id="cancle-btn">
+            <a href="/">취소</a>
+        </div>
+
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/ajax.js"></script>
+    <script src="/js/update.js"></script>
+</body>
+</html>
