@@ -1,5 +1,4 @@
 function ajaxSave(data) {
-    console.log(data)
   $.ajax({
     type: "POST",
     url: "/api/v1/posts",
@@ -19,7 +18,7 @@ function ajaxSave(data) {
 function ajaxUpdate(id, data) {
   $.ajax({
     type: "PUT",
-    url: "/api/v1/posts" + id,
+    url: "/api/v1/posts/" + id,
     data: JSON.stringify(data),
     dataType: "json",
     contentType: "application/json; charset=utf-8",
@@ -36,7 +35,7 @@ function ajaxUpdate(id, data) {
 function ajaxDelete(id) {
   $.ajax({
     type: "DELETE",
-    url: "/api/v1/posts" + id,
+    url: "/api/v1/posts/" + id,
     dataType: "json",
     contentType: "application/json; charset=utf-8",
   })

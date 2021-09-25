@@ -25,7 +25,8 @@ public class IndexController {
     }
 
     @GetMapping("/posts/update/{id}")
-    public String update(@PathVariable Long id){
+    public String update(@PathVariable Long id, Model model){
+        model.addAttribute("post", postService.findById(id));
         return "update";
     }
 }

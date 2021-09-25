@@ -31,20 +31,24 @@
         <form action="">
             <div class="input-box">
                 <label for="">ID</label>
-                <input type="text" id="post-id" placeholder="제목을 입력하세요." readonly>
+                <input type="text" id="post-id" value="{{post.id}}" readonly>
             </div>
 
             <div class="input-box">
                 <label for="">TITLE</label>
-                <input type="text" id="title" placeholder="제목을 입력하세요.">
+                <input type="text" id="title" value="{{post.title}}">
             </div>
             <div class="input-box">
                 <label for="">AUTHOR</label>
-                <input type="text" id="author" placeholder="작성자를 입력하세요." readonly>
+                <input type="text" id="author" value="{{post.author}}" readonly>
+            </div>
+            <div class="input-box">
+                <label for="">MODIFIED DATE</label>
+                <input type="text" id="modified-date" value="{{post.modifiedDate}}" readonly>
             </div>
             <div class="input-box">
                 <label for="">CONTENT</label>
-                <textarea name="" id="content" cols="30" rows="10" placeholder="글을 작성하세요"></textarea>
+                <textarea name="" id="post-content" cols="30" rows="10">{{post.content}}</textarea>
             </div>
         </form>
         <div class="btn" id="update-btn">
